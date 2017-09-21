@@ -1,0 +1,162 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    title Test Grwpo
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+    link(rel="stylesheet", href="css/test.css")
+    link(rel="stylesheet", href="css/font-face.css")
+    link(rel="stylesheet", href="css/font-awesome.min.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous")
+  body
+    header
+      nav.navbar.navbar-light.bg-light.navbar-expand-sm
+        .container
+          a.navbar-brand(href="#")
+            img(src="img/logo-fiat.png" width="50px" alt="Logo Fiat")
+          button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation")
+            img(src="img/btn.png" alt="Menú Hambuerguesa")
+          .collapse.navbar-collapse#navbarTogglerDemo01
+            .navbar-nav.ml-auto.mr-auto
+              a.nav-item.nav-link.npl(href="#") MODELOS
+              a.nav-item.nav-link(href="#") PRUEBA DE MANEJO
+              a.nav-item.nav-link(href="#") COTIZAR
+              a.nav-item.nav-link(href="#") PROMOCIONES
+              a.nav-item.nav-link.hidden-print(href="#") DISTRIBUIDORES
+          .togg
+            img(src="img/btn.png" alt="Menú hamburguesa")
+
+  section.header_bg
+    .bg
+      .bg-color
+    .container.text-center
+      .row
+        .col-md-12
+          .title
+            h1 COTIZADOR
+            h2 CITADINO, AVENTURERO, DEPORTIVO
+            p Elige el tuyo
+      .row.car
+        .col-md-12
+          .cover-car
+            img(src="img/car-fiat.png" alt="Automovil Fiat")
+  form
+    .container
+      .row
+        .col-md-12
+          .form-row
+            .form-group.col-sm-6.col-xs-12
+              label(for="modelo" class="col-form-label") MODELO
+              select(id="modelo" class="form-control")
+                option(disabled selected) SELECCIONA
+            .form-group.col-sm-6.col-xs-12
+              label(for="version" class="col-form-label") VERSIÓN
+              select(id="version" class="form-control")
+                option(disabled selected) SELECCIONA
+          .form-row
+            .form-group.col-sm-6.col-xs-12
+              label(for="estado" class="col-form-label") ESTADO
+              select(id="estado" class="form-control")
+                option(disabled selected) SELECCIONA
+            .form-group.col-sm-6.col-xs-12
+              label(for="distribuidor" class="col-form-label") DISTRIBUIDOR
+              select(id="distribuidor" class="form-control")
+                option(disabled selected) SELECCIONA
+      .row
+        .col-md-12
+          .title-section-form.text-center
+            h1  Datos personales
+            p ESCRIBE TUS DATOS PERSONALES
+
+          .form-row
+              .form-group.col-md-4
+                label(for="nombre" class="col-form-label") NOMBRE (S)
+                input(id="nombre" class="form-control" name="nombre" placeholder="ESCRIBE TU NOMBRE")
+              .form-group.col-md-4
+                label(for="paterno" class="col-form-label") APELLIDO PATERNO
+                input(id="paterno" class="form-control" name="paterno" placeholder="ESCRIBE TU APELLIDO")
+              .form-group.col-md-4
+                label(for="materno" class="col-form-label") APELLIDO MATERNO
+                input(id="materno" class="form-control" name="materno" placeholder="ESCRIBE TU APELLIDO")
+          .form-row
+              .form-group.col-md-4
+                label(for="email" class="col-form-label") EMAIL
+                input(id="email" class="form-control" name="email" placeholder="CORREO@EMAIL.COM.MX")
+              .form-group.col-md-4
+                label(for="telefono" class="col-form-label") TELÉFONO
+                input(id="telefono" class="form-control" name="telefono" placeholder="01.844.439.0654")
+          .form-row
+            .col-md-12
+              p DESEO SER CONTACTADO POR
+            .form-group.col-xs-4.col-md-4.np-lr
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-radio.active
+                  input(type='radio', name='options', id='option1')
+                  i(class="fa fa-phone" aria-hidden="true")
+                  | TELEFONO
+            .form-group.col-xs-4.col-md-4.np-lr
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-radio
+                  input(type='radio', name='options', id='option2')
+                  i(class="fa fa-envelope" aria-hidden="true")
+                  | EMAIL
+            .form-group.col-xs-4.col-md-4.np-lr
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-radio
+                  input(type='radio', name='options', id='option3')
+                  | AMBOS
+
+      .row
+        .col-md-12
+          .title-section-form.text-center
+            h1  Forma de pago
+            p PERSONALIZA TU COTIZACIÓN
+
+          .form-row.d-flex.justify-content-center
+            .form-group.col-md-4.np-lr
+              p ELIGE TU TIPO DE PAGO
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-radio
+                  input(type='radio', name='pago', id='option1')
+                  | CONTADO
+            .form-group.col-md-4.np-lr
+              p.invisible ELIGE TU TIPO DE PAGO
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-radio.active
+                  input(type='radio', name='pago', id='option2')
+                  | CREDITO
+          .form-row.d-flex.justify-content-center
+              .form-group.col-md-4
+                label(for="enganche" class="col-form-label") CANTIDAD DE ENGANCHE
+                input(id="enganche" class="form-control" name="nombre" placeholder="80,000.00")
+              .form-group.col-md-4
+                label(for="plazo" class="col-form-label") PLAZO
+                select(id="plazo" class="form-control")
+                  option(selected) 72 MESES
+
+      .row
+        .col-md-12
+          .title-section-form.text-center
+            h1  Comentarios
+            p NOS IMPORTAN TUS COMENTARIOS
+
+          .form-row
+            .form-group.col-md-12
+              label(for="exampleFormControlTextarea1") ¿DUDAS? ¿COMENTARIOS?
+              textarea(class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="1000" placeholder="ESCRÍBENOS")
+
+      .row.align-items-center
+        .terminos.col-md-9
+          label(class="custom-control custom-checkbox")
+              input( type="checkbox" class="custom-control-input")
+              span(class="custom-control-indicator")
+              span(class="custom-control-description") He leído y acepto el 
+                a(href="#") aviso de privacidad
+          label(class="custom-control custom-checkbox")
+              input( type="checkbox" class="custom-control-input")
+              span(class="custom-control-indicator")
+              span(class="custom-control-description") No deseo recibir promociones
+        .col-md-3.text-right.c
+          button(type="button" class="btn btn-outline-danger") ENVIAR
